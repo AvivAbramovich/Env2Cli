@@ -1,0 +1,6 @@
+version: '3'
+services: 
+  example:
+    image: example
+    build:
+      context: src
