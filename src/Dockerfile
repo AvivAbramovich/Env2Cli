@@ -1,0 +1,12 @@
+FROM python:3.8-alpine
+
+ENV POSITIONAL_ARGUMENT positional_value
+ENV FLAG_ARGUMENT FALSE
+ENV OTHER_FLAG_ARGUMENT TRUE
+ENV SOME_ARGUMENT value
+ENV OPTIONAL_ARGUMENT ''
+
+ADD env2cli env2cli
+ADD example ./
+
+ENTRYPOINT python entrypoint.py
