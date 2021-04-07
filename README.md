@@ -50,3 +50,16 @@ ENV OTHER_PARAM valy
 
 ENTRYPOINT python entrypoint.py
 ```
+
+Or even if your program isn't python!
+
+```Dockerfile
+ENV POSITIONAL_ARG val
+ENV SOME_PARAM value
+ENV OTHER_PARAM valy
+
+...
+
+ENTRYPOINT ./myprog $(env2cli.py)
+# instead ENTRYPOINT ./myprogram ${POSITIONAL_ARG} -p ${SOME_PARAM} --other ${OTHER_PARAM}
+```
